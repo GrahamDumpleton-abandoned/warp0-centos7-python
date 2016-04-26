@@ -6,7 +6,7 @@ ENV WARPDRIVE_VERSION=0.19.2 \
     MOD_WSGI_VERSION=4.5.0
 
 RUN curl -SL -o /opt/app-root/getwarped.sh https://raw.githubusercontent.com/GrahamDumpleton/warpdrive/master/getwarped.sh \
-    && source scl_source enable python34 \
+    && source scl_source enable rh-python34 \
     && sh -x /opt/app-root/getwarped.sh --version $WARPDRIVE_VERSION
 
 ENV STI_SCRIPTS_PATH=/opt/app-root/s2i/bin \

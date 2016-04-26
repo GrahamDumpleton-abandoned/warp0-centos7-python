@@ -13,7 +13,8 @@ RUN curl -SL -o /opt/app-root/getwarped.sh https://raw.githubusercontent.com/Gra
 LABEL io.k8s.description="S2I builder for Python web applications (CentOS 7)." \
       io.k8s.display-name="Python 2.7 (Warp Drive - CentOS 7)" \
       io.openshift.expose-services="8080:http" \
-      io.openshift.tags="builder,python,python27,warpdrive,warpdrive-python27"
+      io.openshift.tags="builder,python,python27,warpdrive,warpdrive-python27" \
+      io.openshift.s2i.scripts-url="image:///usr/local/s2i/bin"
 
 ENTRYPOINT [ "warpdrive", "exec" ]
 CMD [ "warpdrive", "start" ]

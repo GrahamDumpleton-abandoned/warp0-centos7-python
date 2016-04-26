@@ -20,5 +20,4 @@ LABEL io.k8s.description="S2I builder for Python web applications (CentOS 7)." \
       io.openshift.s2i.scripts-url="image:///opt/app-root/s2i/bin" \
       io.s2i.scripts-url=image:///opt/app-root/s2i
 
-ENTRYPOINT [ "warpdrive", "exec" ]
 CMD [ "warpdrive", "start" ]

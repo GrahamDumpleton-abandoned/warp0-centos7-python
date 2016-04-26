@@ -15,7 +15,7 @@ ENV STI_SCRIPTS_PATH=/opt/app-root/s2i/bin \
 LABEL io.k8s.description="S2I builder for Python web applications (CentOS 7)." \
       io.k8s.display-name="Python 3.3 (Warp Drive - CentOS 7)" \
       io.openshift.expose-services="8080:http" \
-      io.openshift.tags="builder,python,python27,warpdrive,warpdrive-python27" \
+      io.openshift.tags="builder,python,python33,warpdrive,warpdrive-python33" \
       io.openshift.s2i.scripts-url="image:///opt/app-root/s2i/bin" \
       io.s2i.scripts-url=image:///opt/app-root/s2i
 

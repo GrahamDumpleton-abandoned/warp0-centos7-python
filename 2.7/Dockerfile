@@ -7,6 +7,7 @@ ENV WARPDRIVE_VERSION=0.19.2 \
     MOD_WSGI_VERSION=4.5.0
 
 RUN curl -SL -o /opt/app-root/getwarped.sh https://raw.githubusercontent.com/GrahamDumpleton/warpdrive/master/getwarped.sh \
+    && source scl_source enable python27 \
     && sh -x /opt/app-root/getwarped.sh --version $WARPDRIVE_VERSION
 
 LABEL io.k8s.description="S2I builder for Python web applications (CentOS 7)." \

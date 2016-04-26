@@ -1,4 +1,4 @@
-FROM centos/python-27-centos7
+FROM openshift/python-27-centos7
 
 MAINTAINER Graham Dumpleton <Graham.Dumpleton@gmail.com>
 

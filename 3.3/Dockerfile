@@ -2,7 +2,7 @@ FROM openshift/python-33-centos7
 
 MAINTAINER Graham Dumpleton <Graham.Dumpleton@gmail.com>
 
-ENV WARPDRIVE_VERSION=0.20.0 \
+ENV WARPDRIVE_VERSION=0.20.1 \
     MOD_WSGI_VERSION=4.5.0
 
 RUN curl -SL -o /opt/app-root/getwarped.sh https://raw.githubusercontent.com/GrahamDumpleton/warpdrive/master/getwarped.sh \

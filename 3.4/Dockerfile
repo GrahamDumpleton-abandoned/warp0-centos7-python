@@ -2,7 +2,7 @@ FROM centos/python-34-centos7
 
 MAINTAINER Graham Dumpleton <Graham.Dumpleton@gmail.com>
 
-ENV WARPDRIVE_VERSION=0.20.1 \
+ENV WARPDRIVE_VERSION=0.21.9 \
     MOD_WSGI_VERSION=4.5.3
 
 RUN curl -SL -o /opt/app-root/getwarped.sh https://raw.githubusercontent.com/GrahamDumpleton/warpdrive/master/getwarped.sh \

@@ -2,8 +2,8 @@ FROM centos/python-27-centos7
 
 MAINTAINER Graham Dumpleton <Graham.Dumpleton@gmail.com>
 
-ENV WARPDRIVE_VERSION=0.22.0 \
-    MOD_WSGI_VERSION=4.5.3
+ENV WARPDRIVE_VERSION=0.23.0 \
+    MOD_WSGI_VERSION=4.5.6
 
 RUN curl -SL -o /opt/app-root/getwarped.sh https://raw.githubusercontent.com/GrahamDumpleton/warpdrive/master/getwarped.sh \
     && source scl_source enable python27 \

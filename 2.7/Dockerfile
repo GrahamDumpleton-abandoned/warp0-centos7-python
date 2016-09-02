@@ -11,10 +11,9 @@ ENV WARPDRIVE_APP_ROOT=/opt/app-root \
 USER root
 RUN rm -rf ${HOME}/.pki && \
     mkdir -p ${WARPDRIVE_APP_ROOT}/.pki/nssdb && \
-    chown -R 1001:0 ${WARPDRIVE_APP_ROOT}/.pki && \
-    mkdir -p ${WARPDRIVE_APP_ROOT}/.cache && \
-    chown -R 1001:0 ${WARPDRIVE_APP_ROOT}/.cache && \
-    usermod -d ${WARPDRIVE_APP_ROOT} default
+    mkdir -p ${WARPDRIVE_APP_ROOT}/.cache/pip && \
+    usermod -d ${WARPDRIVE_APP_ROOT} default && \
+    chown -R 1001:0 ${WARPDRIVE_APP_ROOT}
 USER 1001
 
 ENV HOME=${WARPDRIVE_APP_ROOT}

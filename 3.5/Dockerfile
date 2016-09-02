@@ -18,7 +18,7 @@ USER 1001
 ENV HOME=${WARPDRIVE_APP_ROOT}
 
 RUN curl -SL -o ${WARPDRIVE_APP_ROOT}/getwarped.sh https://raw.githubusercontent.com/GrahamDumpleton/warpdrive/master/getwarped.sh \
-    && source scl_source enable python35 \
+    && source scl_source enable rh-python35 \
     && sh -x ${WARPDRIVE_APP_ROOT}/getwarped.sh --version ${WARPDRIVE_VERSION}
 
 ENV STI_SCRIPTS_PATH=${WARPDRIVE_APP_ROOT}/s2i/bin \

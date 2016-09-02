@@ -13,8 +13,8 @@ RUN rm -rf ${HOME}/.pki && \
     mkdir -p ${WARPDRIVE_APP_ROOT}/.pki/nssdb && \
     chown -R 1001:0 ${WARPDRIVE_APP_ROOT}/.pki && \
     mkdir -p ${WARPDRIVE_APP_ROOT}/.cache && \
-    chown -R 1001:0 ${HOME}/.cache && \
-    usermod -d ${HOME} default
+    chown -R 1001:0 ${WARPDRIVE_APP_ROOT}/.cache && \
+    usermod -d ${WARPDRIVE_APP_ROOT} default
 USER 1001
 
 ENV HOME=${WARPDRIVE_APP_ROOT}

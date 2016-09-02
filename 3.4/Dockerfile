@@ -2,7 +2,7 @@ FROM centos/python-34-centos7
 
 MAINTAINER Graham Dumpleton <Graham.Dumpleton@gmail.com>
 
-ENV WARPDRIVE_VERSION=0.23.0 \
+ENV WARPDRIVE_VERSION=0.23.1 \
     MOD_WSGI_VERSION=4.5.6
 
 ENV WARPDRIVE_APP_ROOT=/opt/app-root \

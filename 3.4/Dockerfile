@@ -2,6 +2,12 @@ FROM centos/python-34-centos7
 
 MAINTAINER Graham Dumpleton <Graham.Dumpleton@gmail.com>
 
+USER root
+
+RUN usermod -d /opt/app-root default
+
+USER 1001
+
 ENV WARPDRIVE_VERSION=0.23.0 \
     MOD_WSGI_VERSION=4.5.6
 

@@ -9,9 +9,15 @@ ENV WARPDRIVE_APP_ROOT=/opt/app-root \
     WARPDRIVE_SRC_ROOT=/opt/app-root/src
 
 USER root
-ENV HOME=${WARPDRIVE_APP_ROOT}
-RUN usermod -d ${HOME} default
+RUN rm -rf ${HOME}/.pki && \
+    mkdir -p ${WARPDRIVE_APP_ROOT}/.pki/nssdb && \
+    chown -R 1001:0 ${WARPDRIVE_APP_ROOT}/.pki && \
+    mkdir -p ${WARPDRIVE_APP_ROOT}/.cache && \
+    chown -R 1001:0 ${HOME}/.cache && \
+    usermod -d ${HOME} default
 USER 1001
+
+ENV HOME=${WARPDRIVE_APP_ROOT}
 
 RUN curl -SL -o ${WARPDRIVE_APP_ROOT}/getwarped.sh https://raw.githubusercontent.com/GrahamDumpleton/warpdrive/master/getwarped.sh \
     && source scl_source enable python27 \

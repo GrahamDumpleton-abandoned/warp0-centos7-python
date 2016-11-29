@@ -3,7 +3,7 @@ FROM openshift/python-33-centos7
 MAINTAINER Graham Dumpleton <Graham.Dumpleton@gmail.com>
 
 ENV WARPDRIVE_VERSION=0.26.0 \
-    MOD_WSGI_VERSION=4.5.8
+    MOD_WSGI_VERSION=4.5.9
 
 ENV WARPDRIVE_APP_ROOT=/opt/app-root \
     WARPDRIVE_SRC_ROOT=/opt/app-root/src
